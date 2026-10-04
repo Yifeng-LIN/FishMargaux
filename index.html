@@ -2,6 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
   <title>Poisson Rouge - Aventure Oceanique</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -505,6 +508,16 @@ window.addEventListener('keydown', e=>{
 });
 
 makeBubbles(); loop();
+</script>
+
+<script src="touch-pad.js"></script>
+<script>
+TouchPad.init({
+  dpad: 'arrows', stick: 'joystick',
+  buttons: [{ label:'▶️', sub:'jouer', code:'Space' }, { label:'🔁', sub:'rejouer', code:'KeyR' }],
+  help: '🕹️ pour nager · ▶️ pour commencer la partie',
+  home: 'https://yifeng-lin.github.io/jeumargaux/'
+});
 </script>
 </body>
 </html>
